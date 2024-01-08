@@ -4,10 +4,10 @@ test("greet", () => {
 	expect(greet("World")).toBe("Hello World");
 });
 
-test.skip("failing test", () => {
+test("failing test", () => {
 	expect(1).toBe(2);
 });
 
-test.skip("another failing test", () => {
+test("another failing test", () => {
 	expect(1).toBe(3);
 });
