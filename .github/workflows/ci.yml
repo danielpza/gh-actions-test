@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test: ["1", "2"]
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
