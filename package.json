@@ -10,10 +10,7 @@
   "jest": {
     "reporters": [
       [
-        "github-actions",
-        {
-          "silent": false
-        }
+        "github-actions"
       ],
       "summary"
     ],
