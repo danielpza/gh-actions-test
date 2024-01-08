@@ -29,3 +29,5 @@ jobs:
           filename: coverage/cobertura-coverage.xml
           badge: true
           format: markdown
+          output: file
+      - run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
