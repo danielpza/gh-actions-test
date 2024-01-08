@@ -22,3 +22,8 @@ jobs:
         with:
           paths: "junit.xml"
         if: always()
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        if: always()
+        with:
+          filename: coverage/clover.xml
