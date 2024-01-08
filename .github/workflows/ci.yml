@@ -27,3 +27,4 @@ jobs:
         if: always()
         with:
           filename: coverage/cobertura-coverage.xml
+          badge: true
