@@ -9,9 +9,7 @@
   },
   "jest": {
     "reporters": [
-      [
-        "github-actions"
-      ],
+      "github-actions",
       "summary"
     ],
     "transform": {}
