@@ -7,6 +7,15 @@
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest"
   },
   "jest": {
+    "reporters": [
+      [
+        "github-actions",
+        {
+          "silent": false
+        }
+      ],
+      "summary"
+    ],
     "transform": {}
   },
   "keywords": [],
