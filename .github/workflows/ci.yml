@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        workspace: ["gh-actions-jest", "gh-actions-vitest"]
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -17,16 +20,16 @@ jobs:
           node-version: 20
           cache: "pnpm"
       - run: pnpm install
-      - run: pnpm test:ci
+      - run: pnpm --filter='${{ matrix.workspace }}'test:ci
       - uses: test-summary/action@v2
         with:
-          paths: "junit.xml"
+          paths: "packages/*/junit.xml"
         if: always()
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         if: always()
         with:
-          filename: coverage/cobertura-coverage.xml
+          filename: "packages/*/coverage/cobertura-coverage.xml"
           badge: true
           format: markdown
           output: file

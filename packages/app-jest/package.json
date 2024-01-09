@@ -1,5 +1,5 @@
 {
-  "name": "gh-actions-test",
+  "name": "gh-actions-jest",
   "version": "1.0.0",
   "description": "",
   "type": "module",
