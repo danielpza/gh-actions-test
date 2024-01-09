@@ -20,7 +20,7 @@ jobs:
           node-version: 20
           cache: "pnpm"
       - run: pnpm install
-      - run: pnpm --filter='${{ matrix.workspace }}'test:ci
+      - run: pnpm --filter='${{ matrix.workspace }}' test:ci
       - uses: test-summary/action@v2
         with:
           paths: "packages/*/junit.xml"
