@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest --globals",
-    "test:ci": "pnpm test -- --coverage"
+    "test:ci": "pnpm test -- --coverage --reporter=junit --outputFile=junit.xml"
   },
   "keywords": [],
   "author": "",
